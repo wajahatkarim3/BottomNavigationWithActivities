@@ -36,10 +36,7 @@ public class BottomActivityWithCenter extends AppCompatActivity {
         bnve.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                if (item.getItemId() == R.id.navigation_plus) {
-                    //Toast.makeText(BottomActivityWithCenter.this, "add", Toast.LENGTH_SHORT).show();
-                    return false;
-                }
+
                 return true;
             }
         });
