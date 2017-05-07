@@ -11,16 +11,23 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".BaseActivity"
-            android:label="@string/app_name">
+            android:label="@string/app_name"></activity>
+        <activity
+            android:name=".HomeActivity"
+            android:launchMode="singleInstance">
         </activity>
-        <activity android:name=".HomeActivity" android:launchMode="singleInstance" >
+        <activity
+            android:name=".DashboardActivity"
+            android:launchMode="singleInstance" />
+        <activity
+            android:name=".NotificationsActivity"
+            android:launchMode="singleInstance" />
+        <activity android:name=".BottomActivityWithCenter">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".DashboardActivity" android:launchMode="singleInstance" />
-        <activity android:name=".NotificationsActivity" android:launchMode="singleInstance"></activity>
     </application>
 
 </manifest>

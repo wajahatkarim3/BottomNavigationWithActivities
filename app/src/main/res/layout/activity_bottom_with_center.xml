@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.wajahatkarim3.bottomnavactivities.BottomActivityWithCenter">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.wajahatkarim3.bottomnavactivities.BottomNavigationViewEx
+                android:id="@+id/bnve"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#33373d"
+                app:itemIconTint="@color/selector_item_gray_color"
+                app:itemTextColor="@color/selector_item_gray_color"
+                app:menu="@menu/navigation_with_plus" />
+
+        </FrameLayout>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:fabSize="mini"
+            app:backgroundTint="#cb202d"
+            app:srcCompat="@drawable/ic_add_white_24dp"
+            />
+
+    </FrameLayout>
+
+</RelativeLayout>
