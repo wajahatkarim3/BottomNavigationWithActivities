@@ -1,10 +1,12 @@
 package com.wajahatkarim3.bottomnavactivities;
 
+import android.animation.Animator;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.support.annotation.NonNull;
 import android.support.design.internal.BottomNavigationItemView;
 import android.support.design.widget.BottomNavigationView;
+import android.support.design.widget.BottomSheetDialog;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -13,6 +15,7 @@ import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewAnimationUtils;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
@@ -20,6 +23,7 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx;
+import com.wajahatkarim3.bottomnavactivities.custom.RevealLayout;
 
 import static android.R.attr.shape;
 import static com.wajahatkarim3.bottomnavactivities.R.id.bnve;
@@ -28,6 +32,7 @@ import static com.wajahatkarim3.bottomnavactivities.R.id.text;
 public class BottomActivityWithCenter extends AppCompatActivity {
 
     BottomNavigationViewEx bnve;
+    RevealLayout mRevealLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,7 +64,9 @@ public class BottomActivityWithCenter extends AppCompatActivity {
         findViewById(R.id.fab).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(BottomActivityWithCenter.this, "add", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(BottomActivityWithCenter.this, "add", Toast.LENGTH_SHORT).show();
+                findViewById(R.id.secondView).setVisibility(View.VISIBLE);
+                mRevealLayout.next((int) findViewById(R.id.fab).getX(), (int) findViewById(R.id.fab).getY());
             }
         });
 
@@ -70,6 +77,10 @@ public class BottomActivityWithCenter extends AppCompatActivity {
         addSelectorLineAt(4);
 
         selectItemAt(bnve.getMenu().getItem(0));
+
+
+
+        mRevealLayout = (RevealLayout) findViewById(R.id.revealLayout);
     }
 
     public void addSelectorLineAt(int position)
