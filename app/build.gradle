@@ -31,5 +31,8 @@ dependencies {
     compile 'com.android.support:support-vector-drawable:25.2.0'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     compile 'com.github.ittianyu:BottomNavigationViewEx:1.1.7'
+    compile ('com.github.ozodrukh:CircularReveal:2.0.1@aar') {
+        transitive = true;
+    }
     testCompile 'junit:junit:4.12'
 }
