@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rootLayout"
+    tools:context="com.wajahatkarim3.bottomnavactivities.PlusMenuActivity">
+
+
+    <io.codetail.widget.RevealFrameLayout
+        android:id="@+id/revealLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <!-- Second View -->
+        <LinearLayout android:id="@+id/secondView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:gravity="bottom"
+            tools:visibility="visible"
+            android:layout_marginBottom="56dp"
+            android:clickable="true"
+            android:background="#CC000000">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Add Review"
+                android:padding="20dp"
+                android:background="@android:color/white"
+                android:clickable="true"
+                android:theme="@style/MyButton"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Add Photos"
+                android:padding="20dp"
+                android:background="@android:color/white"
+                android:clickable="true"
+                android:theme="@style/MyButton"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Create Collection"
+                android:padding="20dp"
+                android:background="@android:color/white"
+                android:clickable="true"
+                android:theme="@style/MyButton"/>
+
+        </LinearLayout>
+
+
+        <!-- Main View -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <FrameLayout android:id="@+id/contentLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="56dp">
+
+            </FrameLayout>
+
+
+
+            <!-- Bottom Nav -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
+                        android:id="@+id/bnve"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:background="#33373d"
+                        app:itemIconTint="@color/selector_item_gray_color"
+                        app:itemTextColor="@color/selector_item_gray_color"
+                        app:menu="@menu/navigation_with_plus" />
+
+                </FrameLayout>
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/fab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    app:fabSize="mini"
+                    app:backgroundTint="#cb202d"
+                    app:srcCompat="@drawable/ic_add_white_24dp"
+                    />
+
+            </FrameLayout>
+
+        </FrameLayout>
+
+
+    </io.codetail.widget.RevealFrameLayout>
+
+
+
+
+</RelativeLayout>
