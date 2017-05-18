@@ -11,6 +11,13 @@
     <style name="MyButton" parent="Theme.AppCompat.Light">
         <item name="colorControlHighlight">@color/colorPrimary</item>
         <item name="colorButtonNormal">@android:color/white</item>
+        <item name="android:background">?attr/selectableItemBackgroundBorderless</item>
+    </style>
+
+    <style name="MyButtonBar" parent="Base.Widget.AppCompat.ButtonBar">
+        <item name="colorControlHighlight">@color/colorPrimary</item>
+        <item name="colorButtonNormal">@android:color/white</item>
+        <item name="android:background">@android:color/white</item>
     </style>
 
 </resources>
